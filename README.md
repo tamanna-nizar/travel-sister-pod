@@ -73,4 +73,15 @@ http://localhost:3001
 
 Project Documentation
 screenshots:
- 
+![Frontend Form]:"C:\Users\kadee\OneDrive\Pictures\Screenshots\Screenshot 2026-02-14 042401.png"
+*Travel input form where users enter their name, destination, travel dates, budget, travel style, and select interests.*
+![Matched Group]:"C:\Users\kadee\OneDrive\Pictures\Screenshots\Screenshot 2026-02-14 043616.png"
+*Displays the matched travel pod including existing users and the current user, with compatibility scores.*
+![Suggested Itinerary]:"C:\Users\kadee\OneDrive\Pictures\Screenshot 2026-02-14 043622.png"
+*Personalized day-wise itinerary generated based on the user's interests, showing fun and safe activities for each day.*
+
+Team Contributions
+
+Tamanna– Frontend development, UI/UX design, form creation, styling, and integrating the interactive travel pod display.
+
+Fahiza – Backend development, Node.js + Express API, compatibility scoring algorithm, itinerary generation, and data handling.
