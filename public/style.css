@@ -1,0 +1,25 @@
+body {
+  font-family: Arial;
+  padding: 30px;
+  background: #fff0f6;
+}
+
+input, select, button {
+  display: block;
+  margin: 10px 0;
+  padding: 8px;
+}
+
+button {
+  background: hotpink;
+  color: white;
+  border: none;
+}
+.card{
+background:white;
+padding:18px;
+border-radius:18px;
+margin-top:18px;
+box-shadow:0 6px 18px rgba(0,0,0,0.08);
+}
+

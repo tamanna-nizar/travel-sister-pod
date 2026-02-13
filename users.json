@@ -1,0 +1,35 @@
+[
+  {
+    "name": "Aisha",
+    "destination": "Goa",
+    "startDate": "2026-03-10",
+    "endDate": "2026-03-14",
+    "budget": "medium",
+    "travelType": "adventure",
+    "photoshootInterest": true,
+    "cafeHopping": true,
+    "shopping": false
+  },
+  {
+    "name": "Meera",
+    "destination": "Goa",
+    "startDate": "2026-03-11",
+    "endDate": "2026-03-15",
+    "budget": "medium",
+    "travelType": "adventure",
+    "photoshootInterest": true,
+    "cafeHopping": false,
+    "shopping": true
+  },
+  {
+    "name": "Zoya",
+    "destination": "Goa",
+    "startDate": "2026-03-09",
+    "endDate": "2026-03-13",
+    "budget": "medium",
+    "travelType": "chill",
+    "photoshootInterest": false,
+    "cafeHopping": true,
+    "shopping": true
+  }
+]

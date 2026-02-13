@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Travel Sister Pod Matcher 🌸</title>
+
+<p style="text-align:center;font-weight:600;color:#ff4da6;">
+🔒 Women Safety First • Smart Compatibility Matching • Small Safe Travel Pods
+</p>
+
+<style>
+body{
+  font-family: Arial;
+  background: linear-gradient(to right,#ffe6f0,#fff5f9);
+  padding:20px;
+}
+
+.container{
+  max-width:600px;
+  margin:auto;
+  background:white;
+  padding:25px;
+  border-radius:15px;
+  box-shadow:0 0 15px rgba(0,0,0,0.1);
+}
+
+h1{
+  text-align:center;
+  color:#ff4da6;
+}
+
+input, select{
+  width:100%;
+  padding:10px;
+  margin:8px 0;
+  border-radius:8px;
+  border:1px solid #ddd;
+}
+
+button{
+  width:100%;
+  padding:12px;
+  background:#ff4da6;
+  color:white;
+  border:none;
+  border-radius:10px;
+  font-size:16px;
+  cursor:pointer;
+}
+
+button:hover{
+  background:#e60073;
+}
+
+.result{
+  margin-top:20px;
+  background:#fff0f5;
+  padding:15px;
+  border-radius:10px;
+}
+
+.interests label{
+  display:block;
+  margin:5px 0;
+}
+</style>
+</head>
+
+<body>
+<div class="container">
+  <h1>🌸 Travel Sister Pod Matcher</h1>
+
+  <input id="name" placeholder="Your Name">
+  <input id="destination" placeholder="Destination">
+  <input id="startDate" type="date" placeholder="Start Date">
+  <input id="endDate" type="date" placeholder="End Date">
+
+  <select id="budget">
+    <option value="">Select Budget</option>
+    <option value="low">Low</option>
+    <option value="medium">Medium</option>
+    <option value="high">High</option>
+  </select>
+
+  <select id="travelType">
+    <option value="">Travel Type</option>
+    <option value="relax">Relax</option>
+    <option value="adventure">Adventure</option>
+    <option value="culture">Culture</option>
+  </select>
+
+  <div class="interests">
+    <p>Select Interests:</p>
+    <label><input type="checkbox" id="photoshootInterest"> Photoshoot Spots 📸</label>
+    <label><input type="checkbox" id="cafeHopping"> Cafe Hopping ☕</label>
+    <label><input type="checkbox" id="shopping"> Shopping 🛍</label>
+  </div>
+
+  <button onclick="matchGroup()">Find My Travel Pod 💖</button>
+
+  <div id="output" class="result"></div>
+</div>
+
+<script>
+async function matchGroup(){
+  const name = document.getElementById("name").value;
+  const destination = document.getElementById("destination").value;
+  const startDate = document.getElementById("startDate").value;
+  const endDate = document.getElementById("endDate").value;
+  const budget = document.getElementById("budget").value;
+  const travelType = document.getElementById("travelType").value;
+  const photoshootInterest = document.getElementById("photoshootInterest").checked;
+  const cafeHopping = document.getElementById("cafeHopping").checked;
+  const shopping = document.getElementById("shopping").checked;
+
+  if(!name || !destination || !startDate || !endDate || !budget || !travelType){
+    alert("Please fill all required details!");
+    return;
+  }
+
+  const body = {
+    name,
+    destination,
+    startDate,
+    endDate,
+    budget,
+    travelType,
+    photoshootInterest,
+    cafeHopping,
+    shopping
+  };
+
+  try {
+    const res = await fetch("/match", {
+      method: "POST",
+      headers: {"Content-Type":"application/json"},
+      body: JSON.stringify(body)
+    });
+
+    const data = await res.json();
+
+    // Display Matched Group
+    let groupHTML = data.group.map(u => `🌸 ${u.name} — ${u.score}% match`).join("<br>");
+
+    // Display Itinerary
+    let itineraryHTML = data.itinerary.map(d => d).join("<br>");
+
+    document.getElementById("output").innerHTML = `
+      --------------------------------<br>
+      💖 Your Travel Pod<br>
+      --------------------------------<br>
+      ${groupHTML}
+      <br><br>
+      --------------------------------<br>
+      ✨ Suggested Itinerary<br>
+      --------------------------------<br>
+      ${itineraryHTML}
+    `;
+
+  } catch(err){
+    console.error(err);
+    alert("Something went wrong! Make sure the backend is running.");
+  }
+}
+</script>
+
+</body>
+</html>
