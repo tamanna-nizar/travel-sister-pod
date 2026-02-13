@@ -73,7 +73,8 @@ http://localhost:3001
 
 Project Documentation
 screenshots:
-![Frontend Form]:"C:\Users\kadee\OneDrive\Pictures\Screenshots\Screenshot 2026-02-14 042401.png"
+![Frontend Form]:<img width="1920" height="448" alt="image" src="https://github.com/user-attachments/assets/ac844af3-dd75-4d76-a2b0-1701a1da0abf" />
+
 *Travel input form where users enter their name, destination, travel dates, budget, travel style, and select interests.*
 ![Matched Group]:"C:\Users\kadee\OneDrive\Pictures\Screenshots\Screenshot 2026-02-14 043616.png"
 *Displays the matched travel pod including existing users and the current user, with compatibility scores.*
