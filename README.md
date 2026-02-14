@@ -80,7 +80,7 @@ screenshots:
 *Displays the matched travel pod including existing users and the current user, with compatibility scores.*
 *Personalized day-wise itinerary generated based on the user's interests, showing fun and safe activities for each day.*
 screen record "https://drive.google.com/file/d/1p6LuONDZJE-6tVFzYxov5NJIbdAGwNzV/view?usp=sharing"
-
+https://drive.google.com/file/d/1p6LuONDZJE-6tVFzYxov5NJIbdAGwNzV/view?usp=drive_link
 Team Contributions
 
 Tamanna– Frontend development, UI/UX design, form creation, styling, and integrating the interactive travel pod display.
