@@ -76,9 +76,8 @@ screenshots:
 ![Frontend Form]:https://github.com/tamanna-nizar/travel-sister-pod/blob/main/SECONDSCRNSHOT.png
 
 *Travel input form where users enter their name, destination, travel dates, budget, travel style, and select interests.*
-![Matched Group]:
+![Matched Group]:https://github.com/tamanna-nizar/travel-sister-pod/blob/main/SECONDSCRNSHOT.png
 *Displays the matched travel pod including existing users and the current user, with compatibility scores.*
-![Suggested Itinerary]:"C:\Users\kadee\OneDrive\Pictures\Screenshot 2026-02-14 043622.png"
 *Personalized day-wise itinerary generated based on the user's interests, showing fun and safe activities for each day.*
 
 Team Contributions
